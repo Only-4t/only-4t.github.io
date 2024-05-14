@@ -3,8 +3,7 @@
 <head>
     <style>
         body {
-            /* Imposta il colore di sfondo predefinito per il desktop */
-            background-color: #08081E; /* Colore di sfondo per desktop */
+            background-color: #0d0e30; /* Colore di sfondo */
         }
         img {
             width: 100vw;
@@ -30,25 +29,17 @@
         var mobileImage = "PlaceholderMOB.png";
         var desktopImage = "Placeholder.png";
 
-        // Imposta il colore di sfondo desiderato per il dispositivo mobile e desktop
-        var mobileBgColor = "#08081C"; /* Colore di sfondo per dispositivi mobili */
-        var desktopBgColor = "#08081E"; /* Colore di sfondo per desktop */
-
         // Controlla se l'utente sta visualizzando la pagina da un dispositivo mobile o desktop
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             // Se l'utente sta visualizzando la pagina da un dispositivo mobile, imposta il link al link per dispositivi mobili
             document.getElementById("previewLink").href = mobileLink;
             // Carica l'immagine per dispositivi mobili
             document.querySelector('img').src = mobileImage;
-            // Imposta il colore di sfondo per dispositivi mobili
-            document.body.style.backgroundColor = mobileBgColor;
         } else {
             // Altrimenti, imposta il link al link per dispositivi desktop
             document.getElementById("previewLink").href = desktopLink;
             // Carica l'immagine per dispositivi desktop
             document.querySelector('img').src = desktopImage;
-            // Imposta il colore di sfondo per desktop
-            document.body.style.backgroundColor = desktopBgColor;
         }
     </script>
 </body>
