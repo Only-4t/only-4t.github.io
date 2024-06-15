@@ -1,46 +1,118 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <style>
-        body {
-            background-color: #0d0e30; /* Colore di sfondo */
-        }
-        img {
-            width: 100vw;
-            max-width: 100%;
-            height: auto;
-            display: block; /* Imposta l'immagine come blocco per consentire di applicare larghezza massima */
-            margin: auto; /* Centra l'immagine */
-        }
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tGRAF</title>
+    <title>Homepage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #F3F3F3;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .section {
+            width: 1920px;
+            height: 391px;
+            position: absolute;
+            background: #202020;
+        }
+        .contact-info {
+            width: 371px;
+            height: 124px;
+            position: absolute;
+            text-align: right;
+            color: #F3F3F3;
+            font-size: 20px;
+            font-weight: 500;
+            right: 0;
+            top: 63px;
+        }
+        .contact-info span {
+            display: block;
+        }
+        .icon {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+        }
+        .icon div {
+            position: absolute;
+            background: #F3F3F3;
+        }
+        .address {
+            width: 317px;
+            height: 80px;
+            position: absolute;
+            color: #F3F3F3;
+            font-size: 20px;
+            font-weight: 500;
+            text-decoration: underline;
+            top: 63px;
+            left: 70px;
+        }
+        .footer {
+            width: 292px;
+            height: 43px;
+            position: absolute;
+            text-align: center;
+            color: #F3F3F3;
+            font-size: 15px;
+            font-weight: 500;
+            top: 158px;
+            left: 814px;
+        }
+        .footer span {
+            display: block;
+        }
+        .made-by {
+            width: 255px;
+            height: 82px;
+            position: absolute;
+            top: 63px;
+            left: 833px;
+        }
+        .made-by div {
+            background: #F3F3F3;
+        }
+    </style>
 </head>
 <body>
-    <a href="#" id="previewLink"><img src="Placeholder.png" alt="Immagine PNG"></a>
-
-    <script>
-        // Ottieni il link dell'anteprima del sito desiderato per il dispositivo mobile e desktop
-        var mobileLink = "https://www.figma.com/proto/eBoEFPjvLQZwCURwdKOrpy/tGRAF---Main?type=design&node-id=2104-42&t=pVSvecaBobvPJBZ6-1&scaling=scale-down&page-id=2104%3A41";
-        var desktopLink = "https://www.figma.com/proto/eBoEFPjvLQZwCURwdKOrpy/tGRAF---Main?type=design&node-id=23-3&t=QqjMtXp90oItxW0u-1&scaling=contain&page-id=0%3A1";
-
-        // Ottieni il percorso dell'immagine desiderata per il dispositivo mobile e desktop
-        var mobileImage = "PlaceholderMOB.png";
-        var desktopImage = "Placeholder.png";
-
-        // Controlla se l'utente sta visualizzando la pagina da un dispositivo mobile o desktop
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            // Se l'utente sta visualizzando la pagina da un dispositivo mobile, imposta il link al link per dispositivi mobili
-            document.getElementById("previewLink").href = mobileLink;
-            // Carica l'immagine per dispositivi mobili
-            document.querySelector('img').src = mobileImage;
-        } else {
-            // Altrimenti, imposta il link al link per dispositivi desktop
-            document.getElementById("previewLink").href = desktopLink;
-            // Carica l'immagine per dispositivi desktop
-            document.querySelector('img').src = desktopImage;
-        }
-    </script>
+    <div class="container">
+        <div class="section">
+            <div class="contact-info">
+                <span>Amministrazione: <span style="text-decoration: underline;">info@tgrafprint.com</span></span>
+                <span>Prestampa: <span style="text-decoration: underline;">marica@tgrafprint.com</span></span>
+                <span>PEC: <span style="text-decoration: underline;">tgrafprint@pec.it</span></span>
+                <span>0423 858666</span>
+            </div>
+            <div class="icon" style="top: 157px; left: 152px;">
+                <div style="width: 19.68px; height: 19.68px; top: 5.16px; left: 5.16px;"></div>
+                <div style="width: 8px; height: 8px; top: 15px; left: 9.34px; transform: rotate(-45deg);"></div>
+            </div>
+            <div class="icon" style="top: 157px; left: 110.99px;">
+                <div style="width: 15.47px; height: 17.79px; top: 6.14px; left: 7.27px;"></div>
+            </div>
+            <div class="icon" style="top: 157px; left: 70px;"></div>
+            <div class="address">
+                Via Piave, 43/3<br>
+                31031 CAERANO DI SAN MARCO (TV)
+            </div>
+            <div class="footer">
+                Made with <3 by:<br>
+                <span style="text-decoration: underline;">@only4t_official</span> - <span style="text-decoration: underline;">@dardan_bytyqi_</span>
+            </div>
+            <div class="made-by">
+                <div style="width: 254.10px; height: 79.49px; top: 1.09px; left: 0.67px;"></div>
+                <div style="width: 19.99px; height: 14.99px; top: 27.93px; left: 176.21px;"></div>
+                <div style="width: 16.04px; height: 12.39px; top: 28.75px; left: 138.12px;"></div>
+                <div style="width: 22.23px; height: 36.76px; top: 23.55px; left: 31.15px;"></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
