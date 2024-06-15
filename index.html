@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+        
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
@@ -34,6 +36,11 @@
         }
         .contact-info span {
             display: block;
+            word-wrap: break-word;
+        }
+        .contact-info span a {
+            color: #F3F3F3;
+            text-decoration: underline;
         }
         .icon {
             width: 30px;
@@ -54,6 +61,7 @@
             text-decoration: underline;
             top: 63px;
             left: 70px;
+            word-wrap: break-word;
         }
         .footer {
             width: 292px;
@@ -65,9 +73,14 @@
             font-weight: 500;
             top: 158px;
             left: 814px;
+            word-wrap: break-word;
         }
         .footer span {
             display: block;
+        }
+        .footer span a {
+            color: #F3F3F3;
+            text-decoration: underline;
         }
         .made-by {
             width: 255px;
@@ -85,10 +98,10 @@
     <div class="container">
         <div class="section">
             <div class="contact-info">
-                <span>Amministrazione: <span style="text-decoration: underline;">info@tgrafprint.com</span></span>
-                <span>Prestampa: <span style="text-decoration: underline;">marica@tgrafprint.com</span></span>
-                <span>PEC: <span style="text-decoration: underline;">tgrafprint@pec.it</span></span>
-                <span>0423 858666</span>
+                <span>Amministrazione: <a href="mailto:info@tgrafprint.com">info@tgrafprint.com</a></span>
+                <span>Prestampa: <a href="mailto:marica@tgrafprint.com">marica@tgrafprint.com</a></span>
+                <span>PEC: <a href="mailto:tgrafprint@pec.it">tgrafprint@pec.it</a></span>
+                <span><br/>0423 858666</span>
             </div>
             <div class="icon" style="top: 157px; left: 152px;">
                 <div style="width: 19.68px; height: 19.68px; top: 5.16px; left: 5.16px;"></div>
@@ -104,7 +117,7 @@
             </div>
             <div class="footer">
                 Made with <3 by:<br>
-                <span style="text-decoration: underline;">@only4t_official</span> - <span style="text-decoration: underline;">@dardan_bytyqi_</span>
+                <a href="#">@only4t_official</a> - <a href="#">@dardan_bytyqi_</a>
             </div>
             <div class="made-by">
                 <div style="width: 254.10px; height: 79.49px; top: 1.09px; left: 0.67px;"></div>
