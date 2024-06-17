@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <style>
+        body {
+            background-color: #0d0e30; /* Colore di sfondo */
+        }
+        img {
+            width: 100vw;
+            max-width: 100%;
+            height: auto;
+            display: block; /* Imposta l'immagine come blocco per consentire di applicare larghezza massima */
+            margin: auto; /* Centra l'immagine */
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tGRAF</title>
+</head>
+<body>
+    <a href="#" id="previewLink"><img src="Placeholder.png" alt="Immagine PNG"></a>
+
+    <script>
+        // Ottieni il link dell'anteprima del sito desiderato per il dispositivo mobile e desktop
+        var mobileLink = "https://www.figma.com/proto/eBoEFPjvLQZwCURwdKOrpy/tGRAF---Main?type=design&node-id=2104-42&t=pVSvecaBobvPJBZ6-1&scaling=scale-down&page-id=2104%3A41";
+        var desktopLink = "https://www.figma.com/proto/eBoEFPjvLQZwCURwdKOrpy/tGRAF---Main?type=design&node-id=23-3&t=QqjMtXp90oItxW0u-1&scaling=contain&page-id=0%3A1";
+
+        // Ottieni il percorso dell'immagine desiderata per il dispositivo mobile e desktop
+        var mobileImage = "PlaceholderMOB.png";
+        var desktopImage = "Placeholder.png";
+
+        // Controlla se l'utente sta visualizzando la pagina da un dispositivo mobile o desktop
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            // Se l'utente sta visualizzando la pagina da un dispositivo mobile, imposta il link al link per dispositivi mobili
+            document.getElementById("previewLink").href = mobileLink;
+            // Carica l'immagine per dispositivi mobili
+            document.querySelector('img').src = mobileImage;
+        } else {
+            // Altrimenti, imposta il link al link per dispositivi desktop
+            document.getElementById("previewLink").href = desktopLink;
+            // Carica l'immagine per dispositivi desktop
+            document.querySelector('img').src = desktopImage;
+        }
+    </script>
+</body>
+</html>
