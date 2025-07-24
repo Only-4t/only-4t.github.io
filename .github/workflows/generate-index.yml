@@ -1,0 +1,32 @@
+name: Generate index.html
+
+on:
+  push:
+    branches:
+      - main  # Cambia con il branch che usi per GitHub Pages
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Generate index.html with directory list
+      run: |
+        echo "<!DOCTYPE html><html lang='it'><head><meta charset='UTF-8'><title>Directories</title></head><body><h1>Elenco directory</h1><ul>" > index.html
+        for dir in $(find . -maxdepth 1 -type d ! -name ".git" ! -name ".github" ! -name ".vscode"); do
+          dname=$(basename "$dir")
+          echo "<li><a href=\"$dname/\">$dname</a></li>" >> index.html
+        done
+        echo "</ul></body></html>" >> index.html
+
+    - name: Commit and push changes
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add index.html
+        git commit -m "Aggiornamento automatico index.html con lista directory" || echo "No changes to commit"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
